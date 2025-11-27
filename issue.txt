@@ -1,1 +1,3 @@
 git commit -m "fixed: prompt 길이 수정" - #1
+
+git commit -m "Close #1"
