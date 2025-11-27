@@ -1,15 +1,9 @@
----
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
-assignees: ''
-
----
-
 name: "✨ Feature"
 description: "새로운 기능 추가"
-labels: ["feature"]
+title: "[Feature]: "  # title은 비워둘 수 없습니다. 접두어라도 적어야 합니다.
+labels: ["feature"]   # 문자열('')이 아니라 리스트([]) 형태여야 합니다.
+assignees: []         # 지정할 사람이 없으면 빈 리스트 []
+
 body:
   - type: textarea
     attributes:
@@ -18,13 +12,15 @@ body:
       placeholder: 자세히 적을수록 좋습니다!
     validations:
       required: true
+      
   - type: textarea
     attributes:
       label: ✅ 작업할 내용
       description: 할 일을 체크박스 형태로 작성해주세요.
-      placeholder: 최대한 세분화 해서 적어주세요!
+      placeholder: "- [ ] 세부 구현 사항 1"
     validations:
       required: true
+      
   - type: textarea
     attributes:
       label: 🙋🏻 참고 자료
